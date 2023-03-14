@@ -1,0 +1,69 @@
+* {
+    padding: 0;
+    margin: 0;
+
+}
+
+h2 {
+    text-align: center;
+}
+
+.image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h3 {
+    border: 1px solid rgb(0, 243, 230);
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 5px;
+}
+
+.main-Container {
+    padding: 100px;
+    margin: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.lenguajes {
+    padding-right: 15px;
+    display: flex;
+    justify-content: end;
+    width: 100%;
+}
+
+.texto-lenguajes {
+    border-radius: 15px;
+    background-color: rgb(16, 9, 51);
+}
+
+.data p {
+    align-items: end;
+    display: flex;
+    justify-content: end;
+    margin-top: 20px;
+}
+
+a {
+    text-decoration: none;
+    margin-top: 10px;
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid rgb(0, 243, 230);
+}
+
+.button-delete {
+    border: 1px solid rgb(255, 255, 255);
+    background-color: red;
+    cursor: pointer;
+}
+
+.button-edit {
+    border: 1px solid rgb(255, 255, 255);
+    background-color: rgb(15, 95, 18);
+    cursor: pointer;
+}

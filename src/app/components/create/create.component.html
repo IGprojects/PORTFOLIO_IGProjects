@@ -1,0 +1,73 @@
+<h2 class="titolCreateProjectes">{{title}}</h2>
+<div class="container" *ngIf="project">
+
+    <form #projectform="ngForm" (ngSubmit)="onSubmit(projectform)">
+
+        <table width="100%" height="100%" cellspacing="0" cellpadding="2">
+            <tr>
+                <td>
+                    <p>
+                        <label for="name">Nombre</label> <br>
+                        <input type="text" name="name" placeholder="Introduce tu nombre" #name="ngModel"
+                            [(ngModel)]="project.name" required />
+                    </p>
+                </td>
+                <td>
+                    <p>
+                        <label for="category">Categoria</label> <br>
+                        <input type="text" name="category" placeholder="Introduce la categoria" #category="ngModel"
+                            [(ngModel)]="project.category" required>
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>
+                        <label for="langs">Lenguajes</label> <br>
+                        <input type="text" name="langs" placeholder="Introduce los lenguajes" #langs="ngModel"
+                            [(ngModel)]="project.langs" required />
+                    </p>
+                </td>
+                <td>
+                    <p>
+                        <label for="year">Año</label> <br>
+                        <input type="number" name="year" placeholder="Introduce el año" #year="ngModel"
+                            [(ngModel)]="project.year" required />
+                    </p>
+                </td>
+            </tr>
+        </table>
+
+        <p>
+            <label for="description">Descripción</label> <br>
+            <textarea name="description" placeholder="Introduce la descripción" #description="ngModel"
+                [(ngModel)]="project.description" required></textarea>
+        </p>
+
+        <p>
+            <label for="linkApp">Link para aplicación</label> <br>
+            <input class="links" type="text" name="linkApp" placeholder="Introduce el link 1" #linkApp="ngModel"
+                [(ngModel)]="project.linkApp" required />
+        </p>
+
+        <p>
+            <label for="linkCode">Link para codigo</label> <br>
+            <input class="links" type="text" name="linkCode" placeholder="Introduce el link 2" #linkCode="ngModel"
+                [(ngModel)]="project.linkCode" required />
+        </p>
+
+
+        <p>
+            <label for="image">Imagen</label> <br>
+            <input class="FitxerImatge" type="file" name="image" placeholder="Selecciona una imagen" #image="ngModel"
+                [(ngModel)]="project.image" required (change)="fileChangeEvent($event)" />
+            <!--1.QUAN HI HAGI UN CAMBI EN EL INPUT FARA UN EVENT I A LA VARIABLE $EVENT TINDRA LES DADES CAPTURADES DEL INPUT-->
+        </p>
+
+        <input class="buttoEnviar" type="submit" value="Crear Proyecto" [disabled]="!projectform.form.valid" />
+
+        <p *ngIf="status==1" class="mensaje">Proyecto creado correctamente</p>
+        <p *ngIf="status==2" class="mensajeIncorrecto">Ha habido un error...</p>
+    </form>
+
+</div>

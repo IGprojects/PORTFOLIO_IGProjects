@@ -1,0 +1,137 @@
+* {
+    animation: change-opacity 1s ease;
+}
+
+
+
+.titolCreateProjectes {
+    padding: 5px;
+    text-align: center;
+    line-height: 1;
+    color: #00ffff;
+    animation: neon .08s ease-in-out infinite alternate;
+}
+
+.container {
+    margin-bottom: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container h2 {
+    height: 30px;
+}
+
+p {
+    padding: 30px;
+}
+
+input {
+    width: 115%;
+    color: black;
+    margin-top: 3px;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 20px;
+}
+
+.links {
+    width: 105%;
+}
+
+.FitxerImatge {
+    width: 105%;
+    padding-bottom: 5px;
+}
+
+textarea {
+    width: 105%;
+    color: black;
+    margin-top: 3px;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 20px;
+}
+
+label {
+    margin-left: 8px;
+}
+
+
+.buttoEnviar {
+    background-color: transparent;
+    color: #fff;
+    margin-left: 25%;
+    width: 50%;
+    font-weight: bold;
+    border: 2px solid #fff;
+    margin-bottom: 5px;
+}
+
+
+.buttoEnviar:hover {
+    color: rgb(0, 255, 255);
+    border-color: rgb(0, 255, 255);
+    transition: 1s ease;
+    box-shadow: 0 0 20px rgb(0, 255, 255);
+}
+
+form input[disabled] {
+    color: #ffffff7c;
+    border-color: #ffffff7c;
+    cursor: not-allowed;
+}
+
+form input[disabled]:hover {
+    color: #ffffff7c;
+    border-color: #ffffff7c;
+    transition: 1s ease;
+    box-shadow: 0 0 20px #ffffff7c;
+}
+
+.mensaje {
+    color: rgb(0, 255, 255);
+    font-weight: bold;
+    margin-left: 20%;
+    transition: 1s ease;
+}
+
+.mensajeIncorrecto {
+    color: #ec5151;
+    font-weight: bold;
+    margin-left: 30%;
+    transition: 1s ease;
+}
+
+@keyframes change-opacity {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes neon {
+    from {
+        text-shadow:
+            0 0 6px rgba(202, 228, 225, 0.92),
+            0 0 30px rgba(202, 228, 225, 0.34),
+            0 0 12px rgba(30, 132, 242, 0.52),
+            0 0 21px rgba(30, 132, 242, 0.92),
+            0 0 34px rgba(30, 132, 242, 0.78),
+            0 0 54px rgba(30, 132, 242, 0.92);
+    }
+
+    to {
+        text-shadow:
+            0 0 6px rgba(202, 228, 225, 0.98),
+            0 0 30px rgba(202, 228, 225, 0.42),
+            0 0 12px rgba(30, 132, 242, 0.58),
+            0 0 22px rgba(30, 132, 242, 0.84),
+            0 0 38px rgba(30, 132, 242, 0.88),
+            0 0 60px rgba(30, 132, 242, 1);
+    }
+}

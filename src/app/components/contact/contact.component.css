@@ -1,0 +1,100 @@
+* {
+    animation: change-opacity 1s ease;
+}
+
+.main-container {
+    height: 100%;
+    width: 100%;
+    margin-bottom: 100px;
+}
+
+h2 {
+    text-align: center;
+}
+
+.tituloContact {
+    padding: 10px;
+    line-height: 1;
+    color: #00ffff;
+    animation: neon .08s ease-in-out infinite alternate;
+}
+
+.container {
+    margin: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container input {
+    align-self: center;
+}
+
+textarea {
+    width: 100%;
+    color: black;
+    margin-top: 3px;
+    background-color: #fff;
+    padding: 10px;
+}
+
+.container input {
+    width: 100%;
+    color: black;
+    margin-top: 3px;
+    background-color: #fff;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.buttonSubmit {
+    font-size: larger;
+    margin-top: 10px;
+    background-color: black !important;
+    color: #fff !important;
+    padding: 10px;
+    cursor: pointer;
+    text-align: center;
+    margin-left: 40%;
+
+}
+
+.buttonSubmit:hover {
+    color: #00ffff !important;
+    box-shadow: 0 0 20px rgb(0, 255, 255);
+    transition: 1s ease;
+}
+
+
+
+@keyframes change-opacity {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes neon {
+    from {
+        text-shadow:
+            0 0 6px rgba(202, 228, 225, 0.92),
+            0 0 30px rgba(202, 228, 225, 0.34),
+            0 0 12px rgba(30, 132, 242, 0.52),
+            0 0 21px rgba(30, 132, 242, 0.92),
+            0 0 34px rgba(30, 132, 242, 0.78),
+            0 0 54px rgba(30, 132, 242, 0.92);
+    }
+
+    to {
+        text-shadow:
+            0 0 6px rgba(202, 228, 225, 0.98),
+            0 0 30px rgba(202, 228, 225, 0.42),
+            0 0 12px rgba(30, 132, 242, 0.58),
+            0 0 22px rgba(30, 132, 242, 0.84),
+            0 0 38px rgba(30, 132, 242, 0.88),
+            0 0 60px rgba(30, 132, 242, 1);
+    }
+}

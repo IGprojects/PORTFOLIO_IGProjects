@@ -1,0 +1,36 @@
+<script src="https://formspree.io/js/formbutton-v1.min.js" defer></script>
+<div class="main-container">
+    <h2 class="tituloContact">Contacta conmigo</h2>
+
+    <div class="container">
+        <form id="my-form" action="https://formspree.io/f/myyaplgj" onsubmit="
+            var form = document.getElementById('my-form'); async function handleSubmit(event) { event.preventDefault(); var
+            status=document.getElementById(' my-form-status'); var data=new FormData(event.target);
+            fetch(event.target.action, { method: form.method, body: data, headers: { 'Accept' : 'application/json' }
+            }).then(response=> {
+            if (response.ok) {
+            alert(' Thanks for your submission!'); form.reset() } else { response.json().then(data=> {
+            if (Object.hasOwn(data, 'errors')) {
+            status.innerHTML = data['errors'].map(error=> error['message']).join(', ')
+            } else {
+            alert(' Oops! There was a problem submitting your form') } }) } }).catch(error=> {
+            alert('Oops! There was a problem submitting your form')
+            });
+            }
+            form.addEventListener('submit', handleSubmit)" method="POST">
+            <label>Email:</label>
+            <input type="email" name="email" placeholder="Introduce un email..." />
+            <label>Mensaje:</label>
+            <input type="text" name="message" placeholder="Introduce un mensaje..." />
+            <button id="my-form-button" class="buttonSubmit">Submit</button>
+            <p id="my-form-status"></p>
+        </form>
+        <!-- Place this script at the end of the body tag -->
+
+
+
+    </div>
+
+</div>
+<!--<label for="subject">Subject</label><br>
+        <input type="text" id="subject" name="subject" class="form-control" required value="">-->
